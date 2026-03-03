@@ -1,109 +1,213 @@
-body{
-margin:0;
-font-family:'Montserrat', sans-serif;
-background:#000;
-color:#fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.hero{
-height:100vh;
-background:url('img/hero.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+body {
+  background: #000000;
+  color: #ffffff;
 }
 
-.overlay{
-background:rgba(0,0,0,0.6);
-padding:40px;
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-h1{font-size:3.5em;margin:0;}
-h2{text-align:center;margin:60px 0 30px;}
-
-.btn-primary{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#fff;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
-.portfolio{padding:40px;}
+.overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.portfolio {
+  padding: 60px 20px;
+  text-align: center;
+}
 
 .carousel{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  position:relative;
+  overflow:hidden;
+  max-width:500px;
+  margin:auto;
+  }
+  
+  .carousel-track{
+  display:flex;
+  transition:transform 0.5s ease;
+  width:100%;
+  }
+  
+  .carousel-track img{
+  min-width:100%;
+  height:600px;
+  object-fit:cover;
+  border-radius:12px;
+  }
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
 }
 
-.carousel-track{
-display:flex;
-overflow:hidden;
-width:80%;
-transition:transform 0.5s ease;
+.carousel button:first-child {
+  left: 10px;
 }
 
-.carousel-track img{
-min-width:100%;
+.carousel button:last-child {
+  right: 10px;
 }
 
-button{
-background:none;
-border:none;
-color:#fff;
-font-size:2em;
-cursor:pointer;
+.packages {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.cards{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.card{
-background:#111;
-padding:30px;
-border-radius:12px;
-width:250px;
-text-align:center;
+.card {
+  background: #222;
+  padding: 60px;
+  border-radius: 20px;
+  width: 300px;
 }
 
-.card.highlight{
-background:#fff;
-color:#000;
+.highlight {
+  background:  #ffffff;
 }
 
-.price{
-font-size:1.5em;
-margin:10px 0;
+.contact {
+  padding: 60px 50px;
+  text-align: center;
 }
 
-.contact{
-text-align:center;
-padding:40px;
+.contact a {
+  display: inline-block;
+  margin: 80px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.contact a{
-display:inline-block;
-margin:10px;
-padding:12px 25px;
-background:#fff;
-color:#000;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
+/* SOLO tarjeta Pro */
+.card.highlight {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-footer{
-text-align:center;
-padding:20px;
-color:#777;
+/* Fuerza texto negro dentro de Pro */
+.card.highlight h3,
+.card.highlight p,
+.card.highlight .price {
+  color: #000000 !important;
+}
+.price {
+    font-size: 38px;
+    
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+.card p {
+  margin: 8px 0;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+h2 {
+  margin-bottom: 40px;  /* aumenta separación hacia abajo */
+}
+.overlay p {
+  font-size: 44px;
+  
+ 
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  
+}
+  
+.overlay a {
+  font-size: 18px;
+  
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+.contact a {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.contact a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
 }
