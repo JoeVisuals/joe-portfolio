@@ -104,7 +104,7 @@ body {
 }
 
 .packages {
-  padding: 60px 20px;
+  padding: 0px 20px 20px 20px;
   text-align: center;
 }
 
@@ -127,16 +127,10 @@ body {
 }
 
 .contact {
-  padding: 60px 50px;
+  padding: 20px 50px 60px 50px;
   text-align: center;
 }
 
-.contact a {
-  display: inline-block;
-  margin: 80px;
-  color: #ffffff;
-  text-decoration: none;
-}
 
 footer {
   text-align: center;
@@ -173,8 +167,6 @@ h2 {
 }
 .overlay p {
   font-size: 24px;
-  
- 
   border-bottom: 2px solid white;
   display: inline-block;
   padding-bottom: 5px;
@@ -210,4 +202,7 @@ h2 {
 }
 .card:hover {
   transform: scale(1.05);
+}
+.contact {
+  padding-top: 40px; /* reduce este valor si quieres subir más */
 }
