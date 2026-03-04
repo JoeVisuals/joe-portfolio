@@ -92,8 +92,10 @@ body {
   color: #fff;
 }
 .portfolio {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 0;   /* quitamos padding lateral */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about, .portfolio, .packages, .testimonials, .contact {
   padding: 80px 20px;
@@ -249,3 +251,79 @@ h2 {
   padding: 5px 10px;
   border-radius: 10px;
 }
+.stack-carousel {
+  position: relative;
+  width: 420px;
+  height: 600px;
+  margin: 40px auto 0 auto;
+  transform: translateX(-200px); /* 👈 mueve a la izquierda */
+  perspective: 1200px;
+}
+
+.stack-track {
+  position: relative;
+  width: 420px;
+  height: 600px;
+  border-radius: 20px;
+  /* ❌ quita overflow hidden */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 3;
+}
+
+.slide.prev {
+  opacity: 0.45;
+  transform: scale(0.82) translateX(-170px);
+  z-index: 1;
+}
+
+.slide.next {
+  opacity: 0.45;
+  transform: scale(0.82) translateX(170px);
+  z-index: 1;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  transition: 0.3s ease;
+}
+
+.nav:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav.prev {
+  left: 130px;  /* 200 - 70 = 130 */
+}
+
+.nav.next {
+  right: -290px; /* -70 - 200 = -270 */
+}
+
