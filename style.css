@@ -357,7 +357,7 @@ h2 {
     width: 90%;
     height: 500px;
     margin: 20px auto;
-    transform: translateX(-200px); /* quitamos desplazamiento */
+    transform: translateX(-160px); /* quitamos desplazamiento */
   }
 
   .stack-track {
@@ -385,11 +385,11 @@ h2 {
   }
 
   .nav.prev {
-    left: -20px;
+    left: 145px;
   }
 
   .nav.next {
-    right: -20px;
+    right: -190px;
   }
 
   /* CARDS */
