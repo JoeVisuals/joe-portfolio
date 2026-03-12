@@ -195,4 +195,3 @@ window.addEventListener("scroll", () => {
     hero.style.transform = `translateY(${scroll * 0.3}px)`;
   });
 });  
-});
